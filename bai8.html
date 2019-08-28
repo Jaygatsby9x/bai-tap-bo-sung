@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=[1,5,7,3,4,5,2,1,5];
+    let arrSingle=[];
+    let arrCount=[];
+    let count ;
+    function elementCountArr() {
+        for (let i=0;i<arr.length;i++){
+            count =0
+            arrSingle.push(arr[i]);
+            for (let j = 0;j<arr.length;j++){
+                if(arrSingle[i]==arr[j]){
+                    count++;
+                }
+            }
+            arrCount.push(count);
+        }
+        return console.log(arrCount);
+    }
+    elementCountArr();
+    function arrCountMax() {
+        let  max =arrCount[0];
+        for (let k = 0;k<arrCount.length;k++){
+            if(max<arrCount[k]){
+                max=arrCount[k];
+            }
+        }
+        return console.log(max)
+    }
+    arrCountMax();
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let arrNew=[];
+function checkArr() {
+    let arr = [234,357,435,289,759,876,999];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 != 0 &&
+            Math.floor(arr[i]/10) %2!=0 &&
+            Math.floor(arr[i]/100) %2!=0
+           ){
+            arrNew.push(arr[i]);
+        }
+    }
+    return arrNew;
+};
+checkArr();
+function maxArrNew() {
+    let max=arrNew[0];
+    for ( let i=0;i<arrNew.length;i++){
+        if(max<arrNew[i]){
+            max = arrNew[i];
+        }
+    }
+    return document.write(max);
+}
+maxArrNew();
+
+
+</script>
+</body>
+</html>

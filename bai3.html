@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+     function checkPrime(x) {
+         if (x<2) {
+             return false
+         }
+         for (let i=2; i <=Math.sqrt(x); i++) {
+             if (x%i == 0) {
+                 return false;
+             }
+         }
+         return true;
+     }
+     let  n= +Number(prompt("enter N"));
+     function listedPrime() {
+         for ( let j=2;j<n;j++){
+             if(checkPrime(j)){
+                 document.write(j + "  ");
+             }
+         }
+     }
+     listedPrime();
+</script>
+</body>
+</html>

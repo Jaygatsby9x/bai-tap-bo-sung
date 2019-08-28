@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function greatestCommonDivisor(x,y) {
+    while (x!= y){
+        if (x > y){
+            x-= y;
+        }
+        else{
+            y -= x;
+        }
+    }
+    return x;
+};
+let a = +Number(prompt("enter a"));
+let b = +Number(prompt("enter b"));
+document.write("UCLN :" +greatestCommonDivisor(a,b) +"<br>");
+document.write("BCNN :" +a*b/greatestCommonDivisor(a,b));
+</script>
+</body>
+</html>

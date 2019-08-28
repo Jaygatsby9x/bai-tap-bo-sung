@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [2,5,7,13,15,22,50];
+    let arrNew1=[];
+    let arrNew2=[];
+    let arrNew = [];
+    let n = +Number(prompt("enter the N"));
+function insert(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if ( n<arr[0] ){
+                arr.unshift(n);
+              return   document.write(arr);
+            }else if ( n > arr[arr.length-1]){
+                arr.push(n);
+                return  document.write(arr);
+            }else if (n >= arr[i] && n < arr[i + 1]) {
+                for (let j = 0; j <= i; j++) {
+                    arrNew1.push(arr[j]);
+                }
+                arrNew1.push(n);
+                console.log(arrNew1);
+                for (let k = i + 1; k < arr.length; k++) {
+                    arrNew2.push(arr[k]);
+                }
+                console.log(arrNew2)
+            }
+        }
+};
+insert(arr);
+arrNew = arrNew1.concat(arrNew2);
+document.write(arrNew);
+</script>
+</body>
+</html>
